@@ -14,3 +14,18 @@
 - 3 Overwrite line 246 in the strapi inputs component
 
 "\node_modules\@strapi\admin\admin\src\content-manager\components\Inputs\index.js"
+
+From:
+```
+type={inputType}
+```
+To:
+```
+type={(fieldSchema.customFieldConfig || {}).fieldRenderer || inputType}
+```
+
+
+### Requirements
+For the Color Picker we use the react-colorful libery
+
+`npm install react-colorful`
